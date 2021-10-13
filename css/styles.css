@@ -29,6 +29,7 @@ img {
   padding: 0;
   margin: 0;
 }
+
 a {
   text-decoration: none;
   display: inline-block;
@@ -434,16 +435,20 @@ body {
 }
 
 .client-link {
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary-white-color);
+  width: 100%;
+  height: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.client-link:focus,
+.client-link:hover {
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+}
 .client-icon {
   width: 100%;
   height: 100%;
@@ -453,7 +458,6 @@ body {
 .client-link:hover .client-icon,
 .client-link:focus .client-icon {
   fill: var(--accent-color);
-  border: 2px solid #2196f3;
 }
 
 /* --------ФУТЕР---------- */
@@ -469,9 +473,15 @@ body {
   padding-bottom: 61px;
 }
 .futter-div-social {
-  padding-top: 71px;
-  padding-bottom: 101px;
+  padding-top: 72px;
+  padding-bottom: 100px;
+  margin-right: 93px;
 }
+.futter-div-form {
+  padding-top: 72px;
+  padding-bottom: 94px;
+}
+
 .logo-footer {
   color: var(--accent-color);
   font-family: Raleway;
@@ -523,6 +533,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-white-color);
+  margin-bottom: 20px;
 }
 
 .footer-social-item {
@@ -561,6 +572,48 @@ body {
   fill: var(--primary-white-color);
 }
 
+.form-email {
+  display: inline-flex;
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding: 16px;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  outline: none;
+}
+.form-email:focus {
+  border-color: #2196f3;
+}
+
+.footer-form-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-form-button:focus,
+.footer-form-button:hover {
+  color: #ffffff;
+  background-color: var(--accent-color);
+  fill: var(--primary-white-color);
+}
+.form-contact-icon {
+  margin-left: 10px;
+}
 /* ------------PORTFOLIO------------------- */
 .page-header {
   border-bottom: 1px solid #ececec;
@@ -794,8 +847,13 @@ body {
   padding-bottom: 61px;
 }
 .portfolio-footer-social {
-  padding-top: 71px;
-  padding-bottom: 101px;
+  padding-top: 72px;
+  padding-bottom: 100px;
+  margin-right: 94px;
+}
+.portfolio-futter-div-form {
+  padding-top: 72px;
+  padding-bottom: 100px;
 }
 .portfolio-footer-title {
   display: flex;
@@ -881,6 +939,45 @@ body {
 }
 .portfolio-social-link:hover .portfolio-social-icon,
 .portfolio-social-link:focus .portfolio-social-icon {
+  fill: var(--primary-white-color);
+}
+.potfolio-form-email {
+  display: inline-flex;
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding: 16px;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  outline: none;
+}
+.potfolio-form-email:focus {
+  border-color: #2196f3;
+}
+
+.portfolio-footer-form-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-footer-form-button:focus,
+.portfolio-footer-form-button:hover {
+  color: #ffffff;
+  background-color: #2196f3;
   fill: var(--primary-white-color);
 }
 /* ---------МОДАЛКА------------ */
